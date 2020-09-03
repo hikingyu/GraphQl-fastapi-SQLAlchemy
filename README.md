@@ -9,9 +9,9 @@ Create a database(Used SQLite) with the table structure mentioned in struct.sql 
 ```
 database.py
 
-# Replace 'sqlite:///rfg.db' with your path to database
+db_url='sqlite:///database.sqlite3'
 
-engine = create_engine('sqlite:///rfg.db', convert_unicode=True)
+engine = create_engine(db_url, convert_unicode=True)
 ```
 ## Testing GraphQL
 Go to http://localhost:5000/graphql to try GraphQL. Below are the example queries for adding a new user, getting all users, searching for a user with username and updating username with email id.
