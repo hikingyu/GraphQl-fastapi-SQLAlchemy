@@ -2,8 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-#db_url='sqlite:///database.sqlite3'
-db_url='postgresql://flask:flask@localhost:5432/flask'
+db_url='sqlite:///database.sqlite3'
+#db_url='postgresql://flask:flask@localhost:5432/flask'
 
 engine = create_engine(db_url, convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
